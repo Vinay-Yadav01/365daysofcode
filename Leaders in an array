@@ -1,0 +1,13 @@
+vector<int> Solution::solve(vector<int> &A) {
+    vector<int> ans;
+    int n=A.size();
+    int maxi=-1;
+    for(int i=n-1;i>=0;i--){
+        if(A[i]>=maxi){
+            ans.push_back(A[i]);
+            maxi=A[i];
+        }
+    }
+    reverse(ans.begin(),ans.end());
+    return ans;
+}
