@@ -2,7 +2,9 @@ bool dfs(int start, vector<int> adj[], int vis[], int V){
     vis[start] = 1;
     for(auto it: adj[start]){
         if(vis[it]==0){
-            if(it==V)  return true;
+            if(it==V){
+                return true;
+            }
             else{
                 vis[it] = 1;
                 if(dfs(it, adj, vis, V)==true)
